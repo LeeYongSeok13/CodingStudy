@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 만들기</title>
+    <style>
+        table{
+      border-collapse:collapse;
+    }
+    th, td{
+      border:1px solid #ccc;
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <!-- table 태그 -->
+    <table></table>
+
+    <!-- caption 태그 -->
+    <table>
+        <caption>표 제목</caption>
+    </table>
+
+    <!-- tr 태그 -->
+    <table>
+        <tr></tr>
+    </table>
+
+    <!-- th, td 태그 -->
+    <table>
+        <tr>
+            <th>제목</th>
+            <td>내용</td>
+        </tr>
+    </table>
+
+    <!-- 4행 x 4열 표 -->
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>상품명</th>
+            <th>수량</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>콜라</td>
+            <td>1개</td>
+            <td>1,500원</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>사이다</td>
+            <td>2개</td>
+            <td>1,000원</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>탄산수</td>
+            <td>3개</td>
+            <td>1,000원</td>
+        </tr>
+    </table>
+
+    <!-- rowspan과 colspan 속성 -->
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>상품명</th>
+            <th>수량</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>콜라</td>
+            <td>1개</td>
+            <td>1,500원</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>사이다</td>
+            <td>2개</td>
+            <td rowspan="2">1,000원</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>탄산수</td>
+            <td>3개</td>
+            <!-- 4행 4열은 3행 4열과 병합했으므로 생성하지 않습니다. -->
+        </tr>
+        <tr>
+            <td>총 금액</td>
+            <td colspan="3">6,500원</td>
+            <!-- 5행 2열부터 열 3개를 병합했으므로 나머지 열은 생성하지 않습니다. -->
+        </tr>
+    </table>
+
+    <!-- thead, tfoot, tbody 태그 -->
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>총 금액</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>콜라</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- col과 colgroup 태그 -->
+    <table>
+        <col style="width: 80px">
+        <colgroup span="2" style="width: 150px"></colgroup>
+        <col style="width: 100px">
+<tr>
+            <th>번호</th>
+            <th>상품명</th>
+            <th>수량</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>콜라</td>
+            <td>1개</td>
+            <td>1,500원</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>사이다</td>
+            <td>2개</td>
+            <td>1,000원</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>탄산수</td>
+            <td>3개</td>
+            <td>1,000원</td>
+        </tr>
+        <tr>
+            <td>총 금액</td>
+            <td colspan="3">6,500원</td>
+            <!-- 5행 2열부터 열 3개를 병합했으므로 나머지 열은 생성하지 않습니다. -->
+        </tr>
+    </table>
+
+    <!-- scope 속성 -->
+    <table>
+        <tr>
+            <th scope="col">구분</th>
+            <th scope="col">중간고사</th>
+            <th scope="col">기말고사</th>
+        </tr>
+        <tr>
+            <th scope="row">전공</th>
+            <td>A+</td>
+            <td>B+</td>
+        </tr>
+        <tr>
+            <th scope="row">교양</th>
+            <td>C-</td>
+            <td>B</td>
+        </tr>
+    </table>
+</body>
+</html>
