@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS의 특징 살펴보기</title>
+    <style>
+        /* 적용 우선순위와 개별성 */
+        h1 {
+            font-size:16px;
+            font-weight: normal;
+        }
+        
+        p {
+            color: red
+        }
+        p {
+            color: blue;
+        }
+        p {
+            color: orange;
+        }
+
+        div {
+            color: red;
+        }
+
+        /* 단위 */
+        /* % 단위 */
+        .parent {
+            font-size: 16px;
+        }
+
+        .child {
+            font-size: 80% /* 16px(부모 font-size 크기) * 0.8 = 12.8px */
+        }
+
+        .child-to-child {
+            font-size: 80% /* 12.8px(부모 font-size 크기) * 0.8 = 10.24px */
+        }
+
+        /* em 단위 */
+        .parent {
+            font-size: 16px;
+        }
+
+        .child {
+            font-size: 2em /* 16px(부모 font-size 크기) * 2em = 32px */
+        }
+
+        .child-to-child {
+            font-size: 2em /* 32px(부모 font-size 크기) * 2em = 64px */
+        }
+
+        /* rem 단위 (html 태그의 텍스트 크기에 대한 상대적인 값 현대적인 html 태그의 텍스트 크기 = 16px, 1rem = 16px) */
+        html {
+            font-size: 1rem;
+        }
+
+        .parent {
+            font-size: 1rem; /* 16px * 1rem = 16px */
+        }
+        
+        .child {
+            font-size: 2rem; /* 16px * 2rem = 32px */
+        }
+
+        /* vw 단위 (1vw는 뷰포트 너비의 1/100크기) */
+        /* 기준 뷰포트 너비 900px */
+        .parent {
+            font-size: 1vw; /* 900px * 1/100 = 9px */
+        }
+
+        .child {
+            font-size: 2vw; /* 900px * 2/100 = 18px */
+        }
+
+        /* vh 단위 (1vh는 뷰포트 높이의 1/100 크기) */
+        /* 기준 뷰포트 높이 400px */
+        .parent {
+            font-size: 1vh; /* 400px * 1/100 = 4px */
+        }
+        
+        .child {
+            font-size: 2vh; /* 400px * 2/100 = 8px */
+        }
+
+        /* 색상 표기법 */
+        .box {
+            color: blue;
+        }
+
+        /* RGB 색상 표기법 */
+        h1 {
+            color: rgb(255, 0, 0);
+        }
+
+        h2 {
+            color: rgb(0, 255, 0, .5);
+        }
+
+        /* HEX 표기법 */
+        /* #RRGGBB 같이 00이 가장 낮은 값이고 ff가 가장 높은 값 */
+    </style>
+</head>
+<body>
+    <!-- 기본 스타일 시트 -->
+    <!-- <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6> -->
+
+    <h1>h1 tag</h1>
+    <p>specificity</p>
+
+    <!-- 상속 -->
+    <!-- <div>
+        <p>inherit</p>
+    </div> -->
+
+    <h2>h2 tag</h2>
+</body>
+</html>

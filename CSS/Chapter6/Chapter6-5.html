@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치 속성으로 HTML 요소 배치하기</title>
+    <style>
+        /* position 속성 */
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .red-box {
+            background-color: red;
+            position: relative;
+            /* z-index 속성 */
+            z-index: 10;
+        }
+
+        .green-box {
+            background-color: green;
+            position: relative;
+            /* position: absolute시 - 요소가 원래 있던 공간은 빈 공간으로 인식되어 파란색 요소가 위로 올라옴 */
+            /* position: fixed시 - 해당 요소는 지정된 위치에 고정됨 */
+            /* position: sticky시 - 스크롤하는 중에 일정 지점(임계점)이 되면 요소가 fixed 값처럼 작동 */
+            left: 100px;
+            top: 100px;
+        }
+        
+        .blue-box {
+            background-color: blue;
+        }
+
+        /* float 속성 */
+        img {
+            float: left;
+            margin-right: 1rem;
+        }
+
+        /* 블록 성격 요소를 인라인 성격 요소처럼 배치하기 */
+        div {
+            color: white
+        }
+
+        .red-box1 {
+            background-color: red;
+            float: left;
+        }
+
+        .blue-box1 {
+            background-color: blue;
+            float: left;
+        }
+
+        /* float 속성 사용 시 문제점 */
+        .container {
+            width: 400px;
+            padding: 1rem;
+            margin: 0 auto;
+            border: 1px solid black;
+            background-color: #ccc;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            /* float 속성 사용 시 해당 자식 요소를 부모 요소가 제대로 인식하지 못함 - clear 속성 사용 or overflow 속성 사용 */
+            float: left;
+        }
+
+        .red-box2 {
+            background-color: red;
+        }
+
+        .blue-box2 {
+            background-color: blue;
+        }
+
+        /* clear 속성 */
+        .box3 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .red-box3 {
+            background-color: red;
+            float: left;
+        }
+
+        .green-box3 {
+            background-color: green;
+            float: left;
+        }
+
+        .blue-box3 {
+            background-color: blue;
+            clear: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+    <img src="reze.webp" alt="레제">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo nostrum dolorem mollitia, delectus amet dolorum magnam rem doloremque quo officia sunt ut dolores alias consequuntur optio, atque placeat eos officiis!</p>
+    <div class="red-box1">red-box</div>
+    <div class="blue-box1">blue-box</div>
+    <div class="container">
+        <div class="box2 red-box2"></div>
+        <div class="box2 blue-box2"></div>
+    </div>
+
+    <div class="box3 red-box3"></div>
+    <div class="box3 green-box3"></div>
+    <div class="box3 blue-box3"></div>
+</body>
+</html>

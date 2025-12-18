@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 속성으로 전환 효과 제어하기</title>
+    <style>
+        /* animation-name 속성 */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            /* animation-delay 속성 - 지연 시간 */
+            animation-delay: 3s;
+            /* animation-fill-mode 속성 - 애니메이션 종료된 시점의 상태 유지 */
+            animation-fill-mode: forwards;
+            /* animation-iterator-count 속성 - 실행 횟수 조절 */
+            animation-iteration-count: 3;
+            /* animation-play-state 속성 - 애니메이션의 재생 상태를 지정 */
+            /* animation-direction 속성 - 애니메이션의 진행 방향 지정 */
+            /* animation 속성으로 한번에 지정 가능 */
+        }
+
+        /* 키 프레임 정의하기 */
+        @keyframes bgchange{
+            0%{background-color:red} /* = from{background-color: red} */
+            25%{background-color: orange}
+            50%{background-color: yellow}
+            100%{background-color: green} /* = to{background-color: green} */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

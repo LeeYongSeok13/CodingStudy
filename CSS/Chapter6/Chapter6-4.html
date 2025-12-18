@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 속성으로 요소의 배경 설정하기</title>
+    <style>
+        /* background-color 속성 */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        /* background-image 속성 */
+        .bg_img {
+            width: 360px;
+            height: 360px;
+            background-image: url("reze.webp");
+        }
+
+        /* background-repeat 속성 */
+        .bg_repeat {
+            width: 720px;
+            height: 360px;
+            background-color: white;
+            background-image: url("reze.webp");
+            background-repeat: no-repeat;
+            border: 1px solid black
+        }
+
+        /* background-size 속성 */
+        .bg_size {
+            width: 180px;
+            height: 180px;
+            background-image: url("reze.webp");
+            background-size: 180px 180px;
+        }
+
+        /* background-position 속성 */
+        .bg_position {
+            width: 720px;
+            height: 720px;
+            border: 1px solid black;
+            background-color: white;
+            background-image: url("reze.webp");
+            background-repeat: no-repeat;
+            background-position: 100%;
+        }
+
+        /* background-attachment 속성 */
+
+        .body {
+            height: 1000px;
+        }
+
+        .parent {
+            width: 720px;
+            height: 720px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+
+        .children {
+            height: 2000px;
+            background-image: url("reze.webp");
+            background-attachment: scroll; /* local, fixed */
+        }
+
+        /* background 속성으로 한 번에 지정하기 */
+        /* div {
+            background-color: red;
+            background-image: url("reze.webp");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        -> div {
+            background: red url("reze.webp") no-repeat center/100% 100% fixed;
+        } */
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="bg_img"></div>
+    <div class="bg_repeat"></div>
+    <div class="bg_size"></div>
+    <div class="bg_position"></div>
+    <div class="body">
+        <div class="parent">
+            <div class="children"></div>
+        </div>
+    </div>
+</body>
+</html>

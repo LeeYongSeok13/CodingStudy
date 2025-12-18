@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자 사용하기</title>
+    <style>
+        /* 링크 가상 클래스 선택자 */
+        a:link { /* 한 번도 방문한 적이 없는 링크 */
+            color: orange;
+        }
+        
+        a:visited { /* 한 번이라도 방문한 적이 있는 링크 */
+            color: green;
+        }
+
+        /* 동적 가상 클래스 선택자 */
+        p:hover {
+            color: red;
+        }
+
+        button:active {
+            color: red;
+        }
+
+        /* 입력 요소 가상 클래스 선택자 */
+        input:focus {
+            color: red;
+        }
+
+        input:checked + label {
+            color: red;
+        }
+
+        input:disabled,
+        button:disabled {
+            background-color: #ccc;
+        }
+
+        input:enabled,
+        button:enabled {
+            background-color: #ccc;
+        }
+
+        /* :first-child와 :last-child */
+        li:first-child {
+            color: red;
+        }
+        li:last-child {
+            color: red;
+        }
+
+        /* :nth-child(n)과 :nth-last-child(n) */
+        p:nth-child(1) {
+            color: red;
+        }
+
+        /* :nth-of-type(n)과 :nth-last-of-type(n) */
+        p:nth-of-type(2) {
+            color: red;
+            /* p:nth-last-of-type(1)과 같음 */
+        }
+
+        /* :first-of-type과 :last-of-type */
+        p:first-of-type {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" disabled>
+    <button disabled>버튼</button>
+    <input type="text">
+    <button>버튼</button>
+
+    <p>lorem 0</p>
+    <div>
+        <p>lorem 1</p>
+        <p>lorem 2</p>
+    </div>
+    <div>
+        <p>lorem 3</p>
+        <p>lorem 4</p>
+    </div>
+
+    <p>lorem 0</p>
+    <div>
+        <p>lorem 1</p>
+        <span>span 1</span>
+        <p>lorem 2</p>
+    </div>
+    <div>
+        <p>lorem 3</p>
+        <span>span 2</span>
+        <span>span 3</span>
+        <p>lorem 4</p>
+    </div>
+
+    <span>span 0</span>
+    <p>lorem 0</p>
+    <div>
+        <span>span 1</span>
+        <p>lorem 1</p>
+        <p>lorem 2</p>
+    </div>
+    <span>span 2</span>
+    <span>span 3</span>
+    <p>lorem 3</p>
+    <p>lorem 4</p>
+</body>
+</html>

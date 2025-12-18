@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 모델을 구성하는 속성 다루기</title>
+    <style>
+        /* margin 영역 - 박스 모델에서 가장 외부에 있는 영역으로, 요소의 외부 여백을 담당 */
+        /* margin-top: <크기>;
+           margin-right: <크기>;
+           margin-bottom: <크기>;
+           margin-left: <크기>;
+           margin: <margin-top> <margin-right> <margin-bottom> <margin-left>;
+           margin: <margin-top> <margin-right> <margin-bottom>;
+           margin: <margin-top & margin-bottom> <margin-right & margin-left>;
+           margin: <margin-top & margin-right & margin-bottom & margin-left>;
+        */
+        p {
+            margin: 10px 20px;
+        }
+         /* margin 겹침 현상 - margin 값이 둘 중 더 큰 값으로 통일되는것 */
+        .first {
+            margin-bottom: 20px;
+        }
+        .second {
+            margin-top: 30px;
+        }
+
+        /* border 영역 - 요소의 테두리 */
+        /* border 속성
+           none - 테두리를 그리지 않음
+           hidden - 테두리를 화면에서 감춤
+           solid - 테두리를 실선으로 그림
+           double - 테두리를 이중 실선으로 그림
+           dotted - 테두리를 점선으로 그림
+           dashed - 테두리를 dotted보다 긴 점선으로 그림
+           groove - 테두리가 파인 것 처럼 그림
+           ridge - 테두리가 튀어나온 것처럼 그림
+           inset - 테두리를 요소가 파인 것처럼 그림
+           outset - 테두리를 요소가 튀어나온 것처럼 그림        
+        */
+
+        /* padding 영역 - 요소 내부의 여백 (margin과 비슷함) */
+        p {
+            padding: 10px;
+        }
+
+        /* content 영역 */
+        /* width와 height 속성 & box-sizing 속성 */
+        div {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+            box-sizing: border-box; /* width, height 속성의 적용 기준을 바꿈 */
+        }
+
+        /* 박스 모델의 성격과 display 속성 */
+        /* 블록 성격 - hn, p, div 처럼 항상 가로 한줄을 다 차지하는 것 */
+        /* 인라인 성격 - 요소의 너비를 콘텐츠 크기만큼만 차지하는 것 */
+        /* 인라인 블록 성격 - 요소의 너비가 콘텐츠의 크기만큼만 차지하지만, 그 외의 성격은 블록 성격 */
+        /* 블록 vs 인라인 vs 인라인 블록 
+        블록, 인라인 블록 - width, height, margin, padding이 모두 적용
+        인라인 - width, height 속성 미적용, margin, padding은 왼쪽과 오른쪽 방향만 적용
+        */
+        /* display 속성 - display 속성을 사용하면 변경할 수 있음(block, inline, inline-block) */
+    </style>
+</head>
+<body>
+    <p>lorem1</p>
+    <p>lorem2</p>
+    <p class="first">lorem1</p>
+    <p class="secont">lorem2</p>
+    <p style="border-style: none">none</p>
+    <p style="border-style: hidden">hidden</p>
+    <p style="border-style: solid">solid</p>
+    <p style="border-style: double">double</p>
+    <p style="border-style: dotted">dotted</p>
+    <p style="border-style: dashed">dashed</p>
+    <p style="border-style: groove">groove</p>
+    <p style="border-style: ridge">ridge</p>
+    <p style="border-style: inset">inset</p>
+    <p style="border-style: outset">outset</p>
+    <div></div>
+</body>
+</html>
