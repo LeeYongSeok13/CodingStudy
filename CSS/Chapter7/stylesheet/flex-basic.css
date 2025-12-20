@@ -59,3 +59,23 @@
     border: 1px solid black;
 }
 
+.flex-container8 {
+    display: flex;
+    justify-content: flex-start;
+    /* flex-end, center, space-between, space-around, space-evenly */
+    width: 300px;
+    height: 200px;
+    background-color: #c4c4c4;
+    border: 1px solid black;
+}
+
+.flex-container9 {
+    display: flex;
+    align-items: center;
+    /* stretch, flex-start, flex-end, center, baseline */
+    width: 300px;
+    height: 200px;
+    background-color: #c4c4c4;
+    border: 1px solid black;
+}
+
