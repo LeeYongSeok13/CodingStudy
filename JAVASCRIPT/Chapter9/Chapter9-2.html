@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료형</title>
+    <script>
+        // 문자열
+        let string1 = "Hello, World!";
+        let string2 = "Hello, World!";
+        console.log(string1);
+        console.log(string2);
+        
+        // 문자열 연결 연산자
+        let string = "문자열" + " 연결 연산자";
+        console.log(string);
+
+        // 이스케이프 문자
+        // \' - 작은 따옴표, \" - 큰 따옴표, \n - 줄 바꿈, \t - 수평 탭, \\ - 역슬래시
+
+        // 템플릿 문자열
+        let dan = 3;
+        let gugu = 8;
+        let string3 = `${dan} 곱하기 ${gugu} 은 ${dan * gugu}입니다.`;
+        console.log(string3);
+
+        // 숫자형
+        let num1 = 10;
+        let num2 = 0.1;
+        console.log(num1);
+        console.log(num2);
+
+        // 논리형
+        let boolean1 = true;
+        let boolean2 = false;
+        console.log(boolean1); // true
+        console.log(boolean2); // false
+
+        let boolean3 = 10 < 20;
+        let boolean4 = 10 > 20;
+        console.log(boolean3); // true
+        console.log(boolean4); // false
+
+        // 특수 자료형 undefined - 데이터를 할당하지 않을 경우 임시로 데이터가 할당되는 값, null - 의도적으로 선언한 공간을 비워둘 때
+        
+        // 객체
+        // 배열
+        let koreanScore = 80;
+        let englishScore = 70;
+        let mathScore = 90;
+        let scienceScore = 60;
+
+        let studentScore = [80, 70, 90, 60]; // 국어, 영어, 수학, 과학 점수
+        console.log(studentScore[1]) // 70, 1번 인덱스의 데이터에 접근
+
+        // 객체 리터럴
+        let studentScore1 = {
+            koreanScore: 80,
+            englishScore: 70,
+            mathScore: 90,
+            scienceScore: 60
+        }
+        console.log(studentScore1.koreanScore); // 80
+        console.log(studentScore1["englishScore"]); // 70
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
