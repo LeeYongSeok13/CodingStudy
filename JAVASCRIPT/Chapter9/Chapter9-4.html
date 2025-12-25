@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 다루기</title>
+    <script>
+        // if, else, else if 문
+        let num1 = 10;
+        if (num % 2 === 0) {
+            console.log("변수 num1에 할당된 숫자는 짝수입니다.");
+        } else {
+            console.log("변수 num1에 할당된 숫자는 홀수입니다.");
+        }
+
+        let num2 = 0;
+        if(num2 > 0) {
+            console.log("양수");
+        } else if (num2 < 0) {
+            console.log("음수");
+        } else {
+            console.log("0");
+        }
+
+        // 중첩하기
+        if(true) {
+            if(true){
+            // 블록문
+            } else {
+            // 블록문
+            } 
+        } else if(true) {
+            if(true) {
+                // 블록문
+            }
+        } else {
+            if(true) {
+                // 블록문
+            } else if(true) {
+                // 블록문
+            } else {
+                // 블록문
+                if(true) {
+                    // 블록문
+                }
+            }
+        }
+
+        // switch문
+        let food = "melon";
+        switch(food) {
+            case "melon":
+                console.log("fruit");
+                break;
+            case "apple":
+                console.log("fruit");
+                break;
+            case "banana":
+                console.log("fruit");
+                break;
+            case "carrot":
+                console.log("vegetable");
+                break;
+            default:
+                console.log("It's not fruits and vegetables.");
+                break;
+        }
+
+        // if 문 vs switch 문
+        let score = 90;
+        if(score >= 90 && score < 100) {
+            console.log("A++ 학점");
+        }
+
+        // 위 if문을 switch문으로 작성
+        let score2 = 90;
+        switch(score) {
+            case 90:
+            case 91:
+            case 92:
+            case 93:
+            case 94:
+            case 95:
+            case 96:
+            case 97:
+            case 98:
+            case 99:
+                console.log("A++ 학점");
+                break;
+            default:
+                break;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

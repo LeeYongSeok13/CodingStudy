@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 다루기</title>
+    <script>
+        // while 문
+        console.log(1);
+        console.log(2);
+        console.log(3);
+        console.log(4);
+        console.log(5);
+
+        // 위 코드를 while 반복문을 사용하여 작성
+        let num1 = 1;
+        while(num1 <= 9999) {
+            console.log(num1);
+            num1++; // 코드가 한번 반복될 때 마다 num1 변수를 1씩 증가 시킴
+        }
+
+        // do...while 문
+        do {
+            console.log("무조건");
+            console.log("한 번은 실행");
+        }while(false);
+
+        // for 문
+        for(let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // for 문 중첩하기
+        for(let i = 0; i < 2; i++) {
+            console.log(`i: ${i}`);
+            for(let k = 0; k < 2; k++) {
+                console.log(`k: ${k}`);
+            }
+        }
+
+        // for 문과 배열
+        let arr = ["banana", "apple", "orange"];
+        for(let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        // for...in 객체 리터럴을 반복할 경우
+        let obj = {name:"철수", age: "20"};
+        for(let key in obj) {
+            console.log(key + ": " + obj[key]);
+        }
+
+        // 배열을 반복할 경우
+        let arr1 = ["orange", "banana", "apple"];
+        for(let index in arr1) {
+            console.log(index + ": " + arr1[index]);
+        } 
+
+        // break 문
+        for(let i = 0; i < 10; i++) {
+            console.log(i);
+            if(i === 5) break;
+        }
+
+        // continue 문
+        for(let i = 1; i <= 10; i++) {
+            if(i % 2 === 1) continue;
+            console.log(i);
+        }
+
+        // 반복문을 사용해 1부터 100까지의 합을 출력하는 코드를 작성하기
+        let sum = 0;
+        for(i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        console.log(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

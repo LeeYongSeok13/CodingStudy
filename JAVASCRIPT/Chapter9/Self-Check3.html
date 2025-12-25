@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀프 체크 3</title>
+    <script>
+        document.write("100부터 999까지 정수 중에서 암스트롱 수에 해당하는 숫자를 모두 출력하는 코드를 작성하세요.");
+
+        for(let i = 1; i <= 9; i++) {
+            for(let j = 1; j <= 9; j++) {
+                for(let k = 1; k <= 9; k++) {
+                    let num = (i * 100) + (j * 10) + (k * 1);
+                    let armstrong = (i ** 3) + (j ** 3) + (k ** 3);
+                    if(num === armstrong) {
+                        console.log(num);
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
