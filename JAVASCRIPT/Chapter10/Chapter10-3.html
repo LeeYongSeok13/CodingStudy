@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 기능 확장하기</title>
+    <script>
+        // 매개변수와 인수
+        function gugudan(dan) {
+            for(let i = 1;  i <= 9; i++) {
+                console.log(`${dan} * ${i} = ${dan * i}`);
+            }
+        }
+        gugudan(3); // 3단 출력
+        gugudan(5); // 5단 출력
+        gugudan(8); // 8단 출력
+
+        // 매개변수의 특징
+        function sum1(a = 10, b = 10) {
+            console.log(a, b);
+        }
+        sum1(); // 10, 10
+
+        // return 문
+        function sum2(num1, num2) {
+            // 매개변수가 숫자가 아니면 강제 종료하는 식을 추가해보자
+            if(typeof num1 !== "number" || typeof num2 !== "number") {
+                return;
+            }
+            let result = num1 + num2;
+            return result;
+            // 위의 식을 return num1 + num2; 로 표현해도 된다.
+        }
+        const result = sum2(10, 20);
+        console.log("out: " + result);
+
+        // 코드에서 max 변수의 출력값이 배열 중 가장 큰 숫자가 될 수 있도록 getArrayNumber() 함수를 완성하세요. 이때, 배열 요소는 반드시 숫자형이라고 가정합니다.
+        function getArrayMaxNumber(arr) {
+            let result = 0;
+            for(let i = 0; i <= arr.length; i++) {
+                if(result < arr[i]) result = arr[i];
+            }
+            return result;
+        }
+        const max = getArrayMaxNumber([10, 50, 30]);
+        console.log(max);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

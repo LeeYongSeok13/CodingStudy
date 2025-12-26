@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 특징 이해하기</title>
+    <script>
+        // 스코프
+        // 함수 스코프
+        let a = 10; // 전역 스코프
+        function sum() {
+            console.log(`함수 내부: ${a}`);
+        }
+        sum();
+        console.log(`함수 외부: ${a}`);
+
+        function sum1() {
+            let b = 10; // 지역 스코프
+            console.log(`함수 내부: ${b}`);
+        }
+        sum1();
+        // console.log(`함수 외부: ${b}`);
+
+        // 블록 스코프
+        let c = 10;
+        {
+            let d = 20;
+            console.log(`코드 블록 내부 c: ${c}`);
+            console.log(`코드 블록 내부 d: ${d}`);
+        }
+        console.log(`코드 블록 외부 c: ${c}`);
+        // console.log(`코드 블록 외부 d: ${d}`);
+
+        var e = 10;
+        {
+            var f = 20;
+            console.log(`코드 블록 내부 e: ${e}`);
+            console.log(`코드 블록 내부 f: ${f}`);
+        }
+        console.log(`코드 블록 외부 e: ${e}`);
+        console.log(`코드 블록 외부 f: ${f}`);
+
+        // 참조 우선순위
+        // let, const 키워드는 같은 식별자의 중복 선언이 불가능하지만, 정확하게는 같은 스코프 영역에서 중복 선언이 불가능
+        let i = 10;
+        const j = 20;
+        function sum() {
+            let i = 50;
+            const j = 70;
+            console.log(`함수 내부 i: ${i}`);
+            console.log(`함수 내부 j: ${j}`);
+        }
+        sum();
+
+        // 함수 호이스팅 - 코드를 선언과 할당으로 분리해 선언부를 자신의 스코프 최상위로 끌어올리는 것
+        // 함수 선언문을 최상위로 끌어올림
+        printHello();
+        function printHello() {
+            console.log("Hello");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

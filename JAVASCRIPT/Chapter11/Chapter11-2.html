@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 속성 다루기</title>
+    <script>
+        // 객체 속성에 접근하기
+        // 대괄호 연산자로 접근하기 - 키는 반드시 큰따옴표나 작은따옴표로 감싼 문자열 형태로 작성
+        const person = {
+            name: "Hong Gildong",
+            age: 20
+        };
+        console.log(person["name"]); // Hong Gildong
+        console.log(person["age"]); // 20
+
+        // 객체의 속성값이 배열이나 객체 리터럴, 함수일 때 접근 방법 - 원리는 같음
+        const person1 = {
+            name: {
+                firstName: "Gildong",
+                lastName: "Hong"
+            },
+            age: 20,
+            likes: ["apple", "samsung"],
+            printHello: function(){
+                return "hello";
+            }
+        }
+        // person1 객체의 name 속성에 값으로 할당된 객체의 firstName 속성에 접근
+        console.log(person1["name"]["firstName"]); // "Gildong"
+        console.log(person1["likes"]); // ["apple", "samsung"]
+        // 배열 인덱스로도 접근
+        console.log(person1["likes"][0]); // apple
+        console.log(person1["likes"][1]); // samsung
+        // 함수 호출
+        console.log(person1["printHello"]); // [Function: printHello]
+        console.log(person1["printHello"]()); // hello
+
+        // 마침표 연산자 - 위 객체에 접근하기 위해 . 을 사용해 객체 속성에 접근
+        // 객체의 키 식별자에 공백이 있다면 마침표 연산자 사용 불가 / 대괄호 연산자로만 접근 가능
+        console.log(person1.name.lastName); // Hong
+        console.log(person1.age); // 20
+        console.log(person1.likes[0]); // apple
+        console.log(person1.printHello()); // hello
+
+        // 객체 속성 값 변경하기
+        const person2 = {
+            name: "Hong Gildong"
+        };
+        person.name = "Kim"; // 또는 person["name"] = "Kim";
+        console.log(person.name);
+
+        // 객체 속성 동적으로 추가하기
+        const person3 = {};
+        console.log(person3); // {}
+        person3.name = "Hong Gildong";
+        console.log(person3); // { name: "Hong Gildong" }
+
+        // 객체 속성 동적으로 삭제하기
+        const person4 = {
+            name: "Hong Gildong"
+        };
+        delete person4.name; // 또는 delete person["name"]
+        console.log(person4); // {} 출력
+
+        // 객체의 데이터 관리 방법 이해하기
+        // 기본 자료형의 데이터 관리 : 깊은 복사
+        let num = 10;
+        let copyNum = num;
+        num = 20; // 변수 20을 재할당
+        console.log(num); // 20
+        console.log(copyNum); // 10
+
+        // 참조 자료형의 데이터 관리 : 얕은 복사
+        const person5 = {
+            name: "Hong Gildong"
+        };
+        // 변수에 다른 객체를 재할당 하려고 하면, const 키워드는 재할당이 불가능하므로 오류 발생 - 아래와 같이 사용하면 오류 발생
+        // person5 = {
+        //     name: "Sucoding"
+        // }
+
+        // 변수에 할당된 객체에 속성을 추가하거나 값을 변경하는건 가능
+        person5.name = "Hong";
+
+        // 총 정리
+        const person6 = {
+            name: "Hong Gildong"
+        };
+        const copyPerson6 = person6; // 변수 person에 할당된 객체를 변수 copyPerson에 복사
+        person6.name = "Hong"; // 변수 person에 할당된 객체의 값을 변경
+        console.log(person6.name); // Hong
+        console.log(copyPerson6.name); // Hong
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시 실행 함수 사용하기</title>
+    <script>
+        // 즉시 실행 함수로 정의하기
+        (function init() {
+            console.log("initialized!");
+        })(); // initialized!
+        init(); // 에러 발생
+
+        // 매개변수가 있는 함수도 즉시 실행 함수로 정의 가능
+        (function sum(a, b) {
+            console.log(a+b);
+        })(10, 20); // 30
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
