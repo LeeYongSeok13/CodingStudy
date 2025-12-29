@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀프 체크 2</title>
+    <!-- 버튼을 클릭하면 사용자의 모니터 화면에 가로 500px, 세로 300px 크기로 팝업창이 열리고, 팝업창에는 구글 사이트가 표시되도록 코드 작성 -->
+</head>
+<body>
+    <button onclick="popup()">구글 팝업 버튼</button>
+    <script>
+        function popup() {
+            const left = (screen.availWidth - 500) / 2 + window.screenX;
+            const top = (screen.availHeight - 300) / 2 + window.screenY;
+            window.open('https://google.com', '팝업', 'width=500', 'height=300', 'left=' + left + ', top=' + top);
+        }
+    </script>
+</body>
+</html>

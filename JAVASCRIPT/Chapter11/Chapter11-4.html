@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델 사용하기</title>
+    <script>
+        // window - 웹 브라우저가 열릴 때 마다 생성되는 최상위 관리 객체
+        // document - 웹 브라우저에 표시되는 HTML 문서 정보가 포함된 객체
+        // location - 웹 브라우저에 현재 표시된 페이지에 대한 URL 정보가 포함된 객체
+        // history - 웹 브라우저에 저장된 방문 기록이 포함된 객체
+        // navigator - 웹 브라우저 정보가 포함된 객체
+        // screen - 웹 브라우저의 화면 정보가 포함된 객체
+
+        // window 객체의 속성과 메서드
+        // 속성 : innerWidth - 웹 브라우저 화면의 너비를 px(픽셀) 단위로 나타냅니다.
+        // innerHeight - 웹 브라우저 화면의 높이를 px 단위로 나타냅니다.
+        // outerWidth - 웹 브라우저 창의 너비를 px 단위로 나타냅니다.
+        // outerHeight - 웹 브라우저 창의 높이를 px 단위로 나타냅니다.
+        // screenTop / screenY - 웹 브라우저 위쪽 면과 모니터의 간격을 px 단위로 나타냅니다.
+        // screenLeft / screenX - 웹 브라우저 왼쪽 면과 모니터의 간격을 px 단위로 나타냅니다.
+        // pageXOffset / scrollX - 웹 브라우저의 수평 스크롤 위치를 px 단위로 나타냅니다.
+        // pageYOffset / scrollY - 웹 브라우저의 수직 스크롤 위치를 px 단위로 나타냅니다.
+        // 메서드 : alert() - 알림창을 표시합니다.
+        // confirm() - 확인창을 표시합니다.
+        // prompt() - 입력창을 표시합니다.
+        // open() - 새로운 웹 브라우저 창을 엽니다.
+        // close() - 웹 브라우저 창을 닫습니다.
+        // setTimeOut() - 일정 시간(ms) 뒤에 콜백 함수를 한 번만 실행합니다.
+        // setInterval() - 일정 시간(ms) 마다 콜백 함수를 반복적으로 실행합니다.
+        // clearInterval - setInterval() 메서드로 반복 실행되는 함수를 중지합니다. 
+        // scrollTo() - 웹 브라우저의 스크롤을 특정 위치만큼 이동합니다.
+        // scrollBy() - 웹 브라우저의 스크롤을 현재 위치에서 상대적 위치로 이동합니다.
+
+        // window 객체의 기본 속성 사용하기
+    </script>
+</head>
+<body>
+    <button onclick="printInfo()">window 객체 속성</button>
+    <button onclick="popup()">팝업</button>
+    <script>
+        function printInfo() {
+            console.log(`웹 브라우저의 너비: ${window.innerWidth}`);
+            console.log(`웹 브라우저의 높이: ${window.innerHeight}`);
+            console.log(`웹 브라우저 창의 너비: ${window.outerWidth}`);
+            console.log(`웹 브라우저 창의 높이: ${window.outerHeight}`);
+            console.log(`웹 브라우저 창 위쪽 면과 모니터 사이의 간격: ${window.screenTop} / ${window.screenY}`);
+            console.log(`웹 브라우저 창 왼쪽 면과 모니터 사이의 간격: ${window.screenLeft} / ${window.screenX}`);
+            console.log(`웹 브라우저 창의 스크롤 가로 위치: ${window.scrollX}`);
+            console.log(`웹 브라우저 창의 스크롤 세로 위치: ${window.scrollY}`);
+        }
+        // 웹 브라우저에서 새 창 제어하기
+        function popup() {
+            window.open('popup.html', '팝업', 'width=200', 'height=100');
+        }
+    </script>
+
+</body>
+</html>
