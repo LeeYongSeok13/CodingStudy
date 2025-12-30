@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 선택하기</title>
+    <script>
+        // 속성으로 노드 선택하기
+        // 모든 노드 탐색: parentNode - 부모 노드를 반환합니다.
+        // childNodes - 모든 자식 노드를 반환합니다.
+        // firstChild - 첫 번째 자식 노드를 반환합니다.
+        // lastChild - 마지막 자식 노드를 반환합니다.
+        // previousSibling - 이전 형제 노드를 반환합니다.
+        // nextSibling - 다음 형제 노드를 반환합니다.
+        // parentElement - 부모 요소 노드를 반환합니다.
+        // children - 자식 요소 노드를 반환합니다.
+        // firstElementChild - 첫 번째 자식 요소 노드를 반환합니다.
+        // lastElementChild - 마지막 자식 요소 노드를 반환합니다.
+        // previousElementSibling - 이전 요소 노드를 반환합니다.
+        // nextElementSibling - 다음 요소 노드를 반환합니다.
+        document.firstChild; // <DOCTYPE html>
+        document.firstElementChild; // html
+
+        // 노드 탐색 속성은 다음과 같이 연속으로 사용할 수 있음.
+        document.childNodes[1].firstElementChild.firstElementChild.nextElementSibling;
+    </script>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="text">text-1</p>
+    <p class="text">text-2</p>
+
+    <div class="box-1">
+        <p class="text1">text-1</p>
+        <p class="text1">text-2</p>
+    </div>
+    <div class="box-2">
+        <p class="text-1">text-3</p>
+        <p class="text-1">text-4</p>
+    </div>
+    
+    <script>
+        // 메서드로 노드 선택하기
+        // getElementById(<id 속성값>) - id 속성값과 일치하는 요소 노드를 1개만 선택합니다.
+        // getElementByClassName(<class 속성값>) - class 속성값과 일치하는 요소 노드를 모두 선택합니다.
+        // getElementsByTagName(<태그명>) - 태그명과 일치하는 요소 노드를 모두 선택합니다.
+
+        // id 속성값이 title인 요소 노드 1개 선택하기.
+        const el = document.getElementById("title");
+        console.log(el);
+
+        // class 속성값이 text인 요소 노드 모두 선택하기
+        const classEl = document.getElementsByClassName("text");
+        console.log(classEl);
+
+        // p 태그에 해당하는 요소 노드 모두 선택하기
+        const tagEls = document.getElementsByName("p");
+        console.log(tagEls);
+
+        // CSS 선택자 사용하기 - query 메서드
+        // querySelector(<CSS 선택자>) - 매개변수로 넘어오는 CSS 선택자에 해당하는 노드를 1개만 선택합니다.
+        // querySelectorAll(<CSS 선택자>) - 매개변수로 넘어오는 CSS 선택자에 해당하는 노드를 모두 선택합니다.
+        const el1 = document.querySelector(".box-1"); // class 속성값이 box-1인 요소 노드 선택
+        const el2 = document.getElementByClassName("box-1")[0].children; // class 속성값이 box-21인 요소의 하위에 있는 p 태그
+    </script>
+</body>
+</html>
