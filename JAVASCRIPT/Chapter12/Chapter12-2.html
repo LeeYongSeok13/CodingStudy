@@ -35,8 +35,8 @@
         <p class="text1">text-2</p>
     </div>
     <div class="box-2">
-        <p class="text-1">text-3</p>
-        <p class="text-1">text-4</p>
+        <p class="text1">text-3</p>
+        <p class="text1">text-4</p>
     </div>
     
     <script>
@@ -61,7 +61,10 @@
         // querySelector(<CSS 선택자>) - 매개변수로 넘어오는 CSS 선택자에 해당하는 노드를 1개만 선택합니다.
         // querySelectorAll(<CSS 선택자>) - 매개변수로 넘어오는 CSS 선택자에 해당하는 노드를 모두 선택합니다.
         const el1 = document.querySelector(".box-1"); // class 속성값이 box-1인 요소 노드 선택
-        const el2 = document.getElementByClassName("box-1")[0].children; // class 속성값이 box-21인 요소의 하위에 있는 p 태그
+        const el2 = document.getElementsByClassName("box-1")[0].children; // class 속성값이 box-21인 요소의 하위에 있는 p 태그
+        console.log(el2);
+        const el3 = document.querySelectorAll(".box-1 .text1");
+        console.log(el3);
     </script>
 </body>
 </html>
