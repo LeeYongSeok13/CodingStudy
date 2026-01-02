@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 추가/삭제하기</title>
+    <script>
+        // 노드 추가하기
+        // 노드 생성: createElement() - 요소 노드를 생성합니다.
+        // createTextNode() - 텍스트 노드를 생성합니다.
+        // createAttribute() - 속성 노드를 생성합니다.
+        // 노드 연결: <기준 노드>.appendChild(<자식 노드>) - 기준 노드에 자식 노드를 연결합니다.
+        // <기준 노드>.setAttributeNode(<속성 노드>) - 기준 노드에 속성 노드를 연결합니다.
+
+        // 요소 노드 생성하기
+        const aEl = document.createElement("a");
+        document.body.appendChild(aEl);
+
+        // 텍스트 노드 추가하기
+        const txtEl = document.createTextNode("길벗");
+        document.querySelector("a").appendChild(txtEl);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
