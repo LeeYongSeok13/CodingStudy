@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>노드 추가/삭제하기</title>
+</head>
+<body>
+     <p>text 1</p>
+     <a href="https://www.gilbut.co.kr">길벗</a>
+     <a href="https://www.sucoding.co.kr">수코딩</a>
+    
     <script>
         // 노드 추가하기
         // 노드 생성: createElement() - 요소 노드를 생성합니다.
@@ -19,9 +25,24 @@
         // 텍스트 노드 추가하기
         const txtEl = document.createTextNode("길벗");
         document.querySelector("a").appendChild(txtEl);
+
+        // href 속성 노드 추가하기
+        const hrefAttr = document.createAttribute("href");
+        hrefAttr.value = "https://www.gilbut.co.kr";
+        document.querySelector("a").setAttributeNode(hrefAttr);
+
+        // 노드 삭제하기
+        // <부모 노드>.removeChild(<자식 노드>)
+        // p 요소 노드를 찾아서 삭제
+        const pEl = document.querySelector("p");
+        pEl.parentNode.removeChild(pEl);
+
+        // DOM 트리를 순회하면서 a 태그에 해당하는 요소 노드를 모두 삭제하는 코드
+        const childNodes = document.body.childNodes;
+        childNodes.forEach((node) => {
+            if(node.nodeName === "a")
+                node.parentNode.removeChild(node);
+        })
     </script>
-</head>
-<body>
-    
 </body>
 </html>
