@@ -17,10 +17,70 @@
         <input type="text">
     </form>
 
-    <script>
-        // form 태그 선택하기
-        // form 속성 사용하기
+    <!-- 폼 요소 선택하기 -->
+    <form name="frm4">
+        <label for="uname">이름</label>
+        <input type="text" id="uname" name="uname">
+        <label for="age">나이</label>
+        <input type="text" id="age" name="age">
+        <label for="gender">성별</label>
+        <select id="gender" name="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+        <button type="submit">전송</button>
+    </form>
 
+    <!-- 폼 요소의 입력값 다루기 -->
+    <form name="frm5">
+        <input type="text" name="id">
+        <input type="password" name="pw">
+    </form>
+
+    <!-- 여러 줄 입력 요소 다루기 -->
+    <form name="frm6">
+        <textarea name="desc"></textarea>
+    </form>
+
+    <!-- 체크박스 다루기 -->
+    <form>
+        <label><input type="checkbox" value="apple">사과</label>
+        <label><input type="checkbox" value="banana">바나나</label>
+        <label><input type="checkbox" value="orange">오렌지</label>
+        <label><input type="checkbox" value="melon">멜론</label>
+    </form>
+
+    <!-- 라디오 버튼 다루기 -->
+    <form>
+        <label><input type="radio" name="fruits" value="apple">사과</label>
+        <label><input type="radio" name="fruits" value="banana">바나나</label>
+        <label><input type="radio" name="fruits" value="orange">오렌지</label>
+        <label><input type="radio" name="fruits" value="melon">멜론</label>
+    </form>
+
+    <!-- 콤보박스 다루기 -->
+    <form>
+        <select>
+            <option value="apple">사과</option>
+            <option value="banana">바나나</option>
+            <option value="orange">오렌지</option>
+            <option value="melon">멜론</option>
+        </select>
+    </form>
+
+    <!-- 파일 업로드 요소 다루기 -->
+    <form name="frm7">
+        <input type="file" name="upload">
+    </form>
+
+
+    <script>
+        // frm5 속성 input에 값 할당하기
+        document.frm5.id.value = 'jscoding';
+        document.frm5.pw.value = 'aaaccc';
+
+        // textarea 값 설정하기
+        document.frm6.desc.value = 'setting!';
     </script>
 </body>
 </html>
