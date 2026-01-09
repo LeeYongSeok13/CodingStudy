@@ -4,8 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이벤트 다루기</title>
+    <script>
+        // 이벤트 종류
+        // 마우스 이벤트: onclick - 마우스로 클릭하면 발생합니다.
+        // ondbclick - 마우스로 빠르게 두번 클릭하면 발생합니다.
+        // onmouseover - 마우스 포인터를 올리면 발생합니다.
+        // onmouseout - 마우스 포인터가 빠져나가면 발생합니다.
+        // onmousemove - 마우스 포인터가 움직이면 발생합니다.
+        
+        // 키보드 이벤트: onkeypress - 키보드 버튼을 누르고 있는 동안 발생합니다.
+        // onkeydown - 키보드 버튼을 누른 순간 발생합니다.
+        // onkeyup - 키보드 버튼을 눌렀다가 뗀 순간 발생합니다.
+
+        // 포커스 이벤트: onfocus - 요소에 포커스가 되면 발생합니다.
+        // onblur - 요소가 포커스를 잃으면 발생합니다.
+
+        // 폼 이벤트: onsubmit - 폼이 전송될 때 발생합니다.
+
+        // 리소스 이벤트: onload - 웹 브라우저의 리소스 로드가 끝나면 발생합니다.
+    </script>
 </head>
 <body>
+    <!-- 이벤트 등록하기 - 인라인 방식으로 이벤트 등록하기 -->
+    <button onclick="clickEvent()">클릭</button>
+
+    <form>
+        <input type="text" onfocus="focusEvent()" onblur="blurEvent()">
+    </form>
+
+    <!-- 프로퍼티 리스너 방식으로 이벤트 등록하기 -->
+    <!-- <button>클릭</button> -->
     
+
+    <script>
+        function clickEvent() {
+            alert("click");
+        }
+
+        function focusEvent() {
+            console.log("focus on");
+        }
+
+        function blurEvent() {
+            console.log("focus out");
+        }
+
+    // 프로퍼티 리스너 방식으로 이벤트 등록하기
+    // const btnEl = document.querySelector("button");
+    // btnEl.onClick = function(){
+    //     alert("click");
+    // }
+
+    // 이벤트 등록 메서드로 이벤트 등록하기
+    // const btnEl =document.querySelector("button");
+    // btnEl.addEventListener("click", function(){
+    // alert("button click");
+    // })
+    
+    </script>
 </body>
 </html>
