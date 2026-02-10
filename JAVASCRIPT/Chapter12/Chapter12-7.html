@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체와 this</title>
+</head>
+<body>
+    <!-- 이벤트 객체 사용하기 -->
+    <button>클릭</button>
+
+    <script>
+        const btnEl = document.querySelector("button");
+        btnEl.addEventListener("click", function(event) { // 이벤트 객체
+            console.log(event);
+            console.log(`clientX: ${event.clientX}`);
+            console.log(`clientY: ${event.clientY}`);
+        })
+
+        // PointerEvent 객체의 주요 속성
+        // clientX - 마우스가 클릭된 x좌표(수평 스크롤 포함X)
+        // clientY - 마우스가 클릭된 y좌표(수직 스크롤 포함X)
+        // pageX - 마우스가 클릭된 x좌표(수평 스크롤 포함O)
+        // pageY - 마우스가 클릭된 y좌표(수평 스크롤 포함O)
+        // screenX - 모니터의 왼쪽 위 모서리를 기준으로 마우스가 클릭된 x좌표
+        // screenY - 모니터의 왼쪽 위 모서리를 기준으로 마우스가 클릭된 y좌표
+    </script>
+</body>
+</html>
