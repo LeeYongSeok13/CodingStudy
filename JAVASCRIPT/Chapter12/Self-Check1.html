@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀프 체크 1</title>
+    <!-- 해당 코드에서 로그인 버튼을 클릭했을 때 제시한 조건에 맞는 입력값에 대한 검증을 처리하는 코드 작성 -->
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>로그인</legend>
+            <button type="button">
+                Log in with Google
+            </button>
+        </fieldset>
+        <p>or</p>
+        <fieldset>
+            <legend>일반 로그인</legend>
+            <label for="username">
+                <input type="text" id="username" name="username" placeholder="Username">
+            </label>
+            <label for="password">
+                <input type="password" id="password" name="password" placeholder="Password">
+            </label>
+            <button type="submit">
+                Login
+            </button>
+        </fieldset>
+        <a href="#">Forgot your password?</a>
+    </form>
+
+    <script>
+        // 로그인 버튼 클릭 시 확인해야 하는 조건
+        // 1. 폼 전송 이벤트를 취소하세요
+        // 2. 아이디가 입력됐는지 확인하고, 입력되지 않았으면 "아이디를 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+        // 3. 아이디 값에 @ 기호가 없으면 "아이디는 이메일 형식으로 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+        // 4. 비밀번호가 입력됐는지 확인하고, 입력되지 않았으면 "비밀번호를 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+        // 5. 비밀번호 길이가 4자리 이하일 경우 "비밀번호는 5자리 이상 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+        // 6. 모든 검증이 끝나면 폼을 전송해 주세요.
+
+        document.forms[0].addEventListener("submit", function(e){
+            // 1. 폼 전송 이벤트를 취소하기
+            e.preventDefault();
+            const idEl = document.forms[0].username;
+            const idValue = idEl.value.trim();
+            const pwEl = document.forms[0].password;
+            const pwValue = pwEl.value.trim();
+
+            // 2. 아이디가 입력됐는지 확인하고, 입력되지 않았으면 "아이디를 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+            if(idValue === ""){
+                alert("아이디를 입력해 주세요.");
+                idEl.focus();
+                return;
+            }
+
+            // 3. 아이디 값에 @ 기호가 없으면 "아이디는 이메일 형식으로 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+            if(idValue.indexOf("@") === -1){
+                alert("아이디는 이메일 형식으로 입력해 주세요.");
+                idEl.focus();
+                return;
+            }
+
+            // 4. 비밀번호가 입력됐는지 확인하고, 입력되지 않았으면 "비밀번호를 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+            if(pwValue === ""){
+                alert("비밀번호를 입력해 주세요.");
+                pwEl.focus();
+                return;
+            }
+
+            // 5. 비밀번호 길이가 4자리 이하일 경우 "비밀번호는 5자리 이상 입력해 주세요."라는 경고창을 표시하고 포커스를 이동합니다.
+            if(pwValue.trim().length <= 4){
+                alert("비밀번호는 5자리 이상 입력해 주세요.");
+                pwEl.focus();
+                return;
+            }
+
+            // 6. 모든 검증이 끝나면 폼을 전송해 주세요.
+            this.submit();
+        })
+    </script>
+</body>
+</html>

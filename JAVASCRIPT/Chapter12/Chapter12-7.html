@@ -9,12 +9,57 @@
     <!-- 이벤트 객체 사용하기 -->
     <button>클릭</button>
 
+    <!-- KeyboardEvent 객체 속성 출력-->
+    <form>
+        <input type="text">
+    </form>
+
+    <!-- 이벤트 취소하기 -->
+    <a href="https://www.naer.com">네이버 이동</a>
+    <a href="https://www.daum.net">다음 이동</a>
+
+    <!-- this 키워드 사용하기 -->
+    <p>text-1</p>
+    <p>text-2</p>
+    <p>text-3</p>
+
     <script>
         const btnEl = document.querySelector("button");
         btnEl.addEventListener("click", function(event) { // 이벤트 객체
             console.log(event);
             console.log(`clientX: ${event.clientX}`);
             console.log(`clientY: ${event.clientY}`);
+            console.log(`pageX: ${event.pageX}`);
+            console.log(`pageY: ${event.pageY}`);
+            console.log(`screenX: ${event.screenX}`);
+            console.log(`screenY: ${event.screenY}`);
+        });
+
+        const inputEl = document.querySelector("input");
+        inputEl.addEventListener("keydown", function(event) { // 이벤트 객체
+            console.log(`keyCode: ${event.keyCode}`);
+            console.log(`ctrlKey: ${event.ctrlKey}`);
+            console.log(`altKey: ${event.altKey}`);
+            console.log(`shiftKey: ${event.shiftKey}`);
+        });
+
+        const aEls = document.querySelectorAll("a");
+        for(let i = 0; i < aEls.length; i++){
+            aEls[i].addEventListener("click", function(e){
+                // 기본 이벤트 취소
+                e.preventDefault();
+            });
+        }
+
+        const pEls = document.querySelectorAll("p");
+        pEls.forEach((el) => {
+            el.addEventListener("click", function(){
+                if(this.style.color === "red"){
+                    this.style.color = "black";
+                } else {
+                    this.style.color = "red";
+                }
+            })
         })
 
         // PointerEvent 객체의 주요 속성
