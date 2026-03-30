@@ -38,7 +38,7 @@
     <main id="main">
         <div class="container">
             <h4>Welcome</h4>
-            <h2>I'M A <span>Front-end Developer</span></h2>
+            <h2>I'M A <span></span></h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eum mollitia eveniet odio deleniti veniam.</p>
             <button class="download">DOWNLOAD CV</button>
             <button class="mouse"><i class="fa-solid fa-computer-mouse"></i></button>
@@ -117,9 +117,109 @@
                 </div>
             </div>
         </div>
-        <!-- 배경 영역 -->
-        <div class="bg"></div>
+    </section>
+    <!-- 배경 영역 -->
+    <div class="bg"></div>
+
+    <!-- 포트폴리오 영역 -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="title">
+                <h4>PORTFOLIOBACK</h4>
+                <h2>PortFolio</h2>
+            </div>
+            <div class="portfolio-me">
+                <div class="portfolio-inner">
+                    <img src="./images/mock1.png" alt="샘플이미지1">
+                    <strong>BRANDING</strong>
+                    <h3>Package Design</h3>
+                </div>
+                <div class="portfolio-inner">
+                    <img src="./images/mock2.png" alt="샘플이미지2">
+                    <strong>DEVELOPMENT</strong>
+                    <h3>Tablet App Dev</h3>
+                </div>
+                <div class="portfolio-inner">
+                    <img src="./images/mock3.png" alt="샘플이미지3">
+                    <strong>MARKETING</strong>
+                    <h3>Coka Cola</h3>
+                </div>
+                <div class="portfolio-inner">
+                    <img src="./images/mock4.png" alt="샘플이미지4">
+                    <strong>APP</strong>
+                    <h3>FaceBook Clone</h3>
+                </div>
+                <div class="portfolio-inner">
+                    <img src="./images/mock5.png" alt="샘플이미지5">
+                    <strong>APP</strong>
+                    <h3>Netflix Clone</h3>
+                </div>
+                <div class="portfolio-inner">
+                    <img src="./images/mock6.png" alt="샘플이미지6">
+                    <strong>WEB</strong>
+                    <h3>FirmBee Web</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- 컨택 영역 만들기 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="title">
+                <h4>CONTACT</h4>
+                <h2>Contact With Me</h2>
+            </div>
+            <div class="contact-me">
+                <div class="left">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>phone</h3>
+                            <p>010-2222-1111</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>email</h3>
+                            <p>sucoding@naver.com</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>address</h3>
+                            <p>Samseeong-ro, Gangnam-gu,<br> Seoul, Republic of Korea</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="text" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">message</label>
+                            <textarea id="msg"></textarea>
+                        </div>
+                        <button type="submit">send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
